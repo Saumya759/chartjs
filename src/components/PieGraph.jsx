@@ -23,7 +23,7 @@ const PieGraph = () => {
   return (
     <>
       <div className="tabcontent2">
-        <div className="template">DOUGH NUT</div>
+        <div className="template">PIE CHART</div>
         <Pie
           data={state}
           options={{
