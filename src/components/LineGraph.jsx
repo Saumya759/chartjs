@@ -19,7 +19,8 @@ const state = {
 
 const LineGraph = () => {
   return (
-    <div className="App">
+    <div className="tabcontent1">
+      <div className="template">LINE GRAPH</div>
       <Line
         data={state}
         options={{

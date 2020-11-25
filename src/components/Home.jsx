@@ -1,27 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import "../Styles/Home.css";
-import Data from "./Data";
 import BarGraph from "./Bar";
 import DoughnutGraph from "./Doughnut";
 import PieGraph from "./PieGraph";
+import LineGraph from "./LineGraph";
+import RadarChart from "./RadarChart";
 
 const Home = () => {
   const [tab, setTab] = useState("Tab1");
-  console.log(tab, "DDDDD");
 
   const renderGraph = () => {
     switch (tab) {
       case "Tab1":
-        return <Data />;
+        return <LineGraph />;
       case "Tab2":
         return <BarGraph />;
       case "Tab3":
-        return <DoughnutGraph/>;
+        return <DoughnutGraph />;
       case "Tab4":
-        return <PieGraph/>;
+        return <PieGraph />;
+      case "Tab5":
+        return <RadarChart />;
       default:
-        return <Data />;
+        return <LineGraph />;
     }
   };
   return (
@@ -74,9 +76,18 @@ const Home = () => {
                   Pie Chart
                 </Button>
               </Col>
+              <Col>
+                <Button
+                  type="text"
+                  className="data"
+                  value="Pie Chart"
+                  onClick={() => setTab("Tab5")}
+                >
+                  Radar Chart
+                </Button>
+              </Col>
             </Col>
             <Col md={8}> {renderGraph()}</Col>
-           
           </Row>
         </div>
       </div>

@@ -27,15 +27,15 @@ const DoughnutGraph = () => {
         <Doughnut
           data={state}
           options={{
-            title:{
-              display:true,
-              text:'Average Rainfall per month',
-              fontSize:20
+            title: {
+              display: true,
+              text: "Average Rainfall per month",
+              fontSize: 20,
             },
-            legend:{
-              display:true,
-              position:'right'
-            }
+            legend: {
+              display: true,
+              position: "right",
+            },
           }}
         />
       </div>
